@@ -1,12 +1,8 @@
 # Portfolio Notes
 
-## Fresh Copy
+## Site Identity
 
-This project is a new standalone copy of:
-
-`/Users/yashovrattiwari/.openclaw/workspace/templates/portfolio-website-examples/Portfolio-website`
-
-The copied project excludes the original `.git` directory and `node_modules`, so it is not a fork or attached to the Mahesh repository.
+This is the standalone portfolio codebase for Yashovrat Tiwari and the public domain https://yashovrat.in/.
 
 ## Chosen GitHub AI Project
 

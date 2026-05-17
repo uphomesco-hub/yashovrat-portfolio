@@ -1,6 +1,6 @@
 # Yashovrat Portfolio
 
-Fresh standalone portfolio copy built from the saved Mahesh-style reference, with Git history and remote origin removed.
+Standalone portfolio for Yashovrat Tiwari, deployed at https://yashovrat.in/.
 
 ## Featured Order
 
@@ -11,7 +11,7 @@ Fresh standalone portfolio copy built from the saved Mahesh-style reference, wit
 
 ## Stack
 
-React, TypeScript, Vite, Tailwind, Framer Motion, Lenis, and the inherited scroll-stack motion system.
+React, TypeScript, Vite, Tailwind, Framer Motion, Lenis, and a scroll-driven motion system.
 
 ## Contact Form
 
