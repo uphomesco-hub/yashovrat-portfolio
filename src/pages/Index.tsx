@@ -136,6 +136,39 @@ const SpinningCTA = () => (
   </motion.div>
 );
 
+const MobileHeroAmbient = () => (
+  <div className="absolute inset-0 md:hidden pointer-events-none overflow-hidden">
+    <style>{`
+      @keyframes mobileHeroAmbientDrift {
+        0%, 100% { transform: translate3d(-8%, -3%, 0) rotate(-8deg); opacity: 0.68; }
+        50% { transform: translate3d(5%, 6%, 0) rotate(6deg); opacity: 0.9; }
+      }
+      .mobile-hero-ambient {
+        position: absolute;
+        inset: -18% -28% 12% -28%;
+        background:
+          linear-gradient(118deg, transparent 0%, rgba(255,255,255,0.12) 36%, rgba(255,255,255,0.03) 49%, transparent 68%),
+          linear-gradient(24deg, transparent 12%, rgba(148,163,184,0.11) 46%, transparent 74%);
+        filter: blur(38px);
+        mix-blend-mode: screen;
+        animation: mobileHeroAmbientDrift 10s ease-in-out infinite;
+      }
+      .mobile-hero-grain {
+        position: absolute;
+        inset: 0;
+        opacity: 0.14;
+        background-image:
+          linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(255,255,255,0.04) 1px, transparent 1px);
+        background-size: 28px 28px;
+        mask-image: linear-gradient(to bottom, black 0%, transparent 72%);
+      }
+    `}</style>
+    <div className="mobile-hero-ambient" />
+    <div className="mobile-hero-grain" />
+  </div>
+);
+
 const MobileSocialStrip = () => {
   const socials = [
     { label: "Github", icon: Github, href: "https://github.com/uphomesco-hub" },
@@ -191,6 +224,7 @@ const Index = () => {
 
       {/* Hero */}
       <section className="relative h-[100svh] md:h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
+        <MobileHeroAmbient />
         <AvailabilityBadge />
         <SocialStrip />
         <SpinningCTA />

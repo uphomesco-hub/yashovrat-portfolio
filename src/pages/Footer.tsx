@@ -135,7 +135,7 @@ const Footer = () => {
         style={{ opacity: textOpacity, scale: textScale }}
         className="w-full flex-1 min-h-0 flex flex-col justify-center items-center overflow-visible select-none px-4 md:px-6 lg:px-8 pb-[max(1.5rem,env(safe-area-inset-bottom))]"
       >
-        <h1 className="font-sans font-black text-[15.2vw] sm:text-[16vw] md:text-[14vw] xl:text-[13vw] leading-none text-white uppercase tracking-tighter flex items-start whitespace-nowrap max-w-full">
+        <h1 className="font-sans font-black text-[13.8vw] sm:text-[14.5vw] md:text-[14vw] xl:text-[13vw] leading-none text-white uppercase tracking-tighter flex items-start whitespace-nowrap max-w-full">
           Yashovrat
           <span className="text-base sm:text-xl md:text-4xl lg:text-6xl font-medium mt-[1.6vw] ml-1 opacity-60">
             ®
