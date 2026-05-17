@@ -37,8 +37,8 @@ const About = () => {
   const opacity4 = useTransform(scrollY, [vh * 0.3, vh * 0.6], [0, 1]);
 
   return (
-    <section className="h-screen w-full bg-white text-black font-sans px-6 md:px-12 lg:px-16 overflow-hidden flex items-center justify-center relative">
-      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-8 md:gap-x-12 w-full max-w-[1600px] mx-auto">
+    <section className="h-[100svh] md:h-screen w-full bg-white text-black font-sans px-6 md:px-12 lg:px-16 pt-32 pb-8 md:py-0 overflow-hidden flex items-start md:items-center justify-center relative">
+      <div className="grid grid-cols-1 md:grid-cols-12 gap-y-7 md:gap-y-8 md:gap-x-12 w-full max-w-[1600px] mx-auto">
 
         {/* Left Column: Context Label */}
         <motion.div
@@ -51,7 +51,7 @@ const About = () => {
         </motion.div>
 
         {/* Right Column: The Data List */}
-        <div className="md:col-span-9 lg:col-span-9 flex flex-col gap-10 md:gap-12">
+        <div className="md:col-span-9 lg:col-span-9 flex flex-col gap-8 md:gap-12">
 
           {/* 01. EDUCATION */}
           <motion.div style={{ y: y2, opacity: opacity2 }} className="flex flex-col gap-2">
@@ -59,10 +59,10 @@ const About = () => {
               01. Operating Field
             </h3>
             <div className="flex flex-col">
-              <p className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+              <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
                 Yashovrat T
               </p>
-              <p className="font-sans text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
+              <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
                 Full-stack developer, AI engineer, and startup builder working across agents, mobile apps, real estate tech, automation, and growth systems.
               </p>
             </div>
@@ -74,23 +74,23 @@ const About = () => {
               02. Startup Experience
             </h3>
 
-            <div className="flex flex-col gap-6">
+            <div className="flex flex-col gap-5 md:gap-6">
               {/* Job 1 */}
               <div>
-                <p className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+                <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
                   Freelance + startup tech lead
                 </p>
-                <p className="font-sans text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
+                <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
                   Built client products as a freelancer and led full-stack execution across multiple startups, including UpHomes and Raddie.
                 </p>
               </div>
 
               {/* Job 2 */}
               <div>
-                <p className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+                <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
                   Zeno AI / Vision Voice Agent
                 </p>
-                <p className="font-sans text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
+                <p className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-normal text-black/70 leading-tight tracking-tight">
                   Real-time vision and voice AI agent with camera context, RAG, full-stack workflows, automation, and a persistent memory layer for agent context.
                 </p>
               </div>
@@ -103,10 +103,10 @@ const About = () => {
               03. Focus
             </h3>
             <ul className="flex flex-col">
-              <li className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+              <li className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
                 Full-stack product engineering with Flutter, React, TypeScript, Node.js, Firebase, and Python
               </li>
-              <li className="font-sans text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
+              <li className="font-sans text-lg sm:text-xl md:text-2xl lg:text-3xl font-bold leading-tight tracking-tight">
                 AI agents, RAG, persistent memory, startup operations, SEO/growth systems, and workflow automation
               </li>
             </ul>

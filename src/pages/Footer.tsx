@@ -34,11 +34,11 @@ const Footer = () => {
   };
 
   return (
-    <footer ref={footerRef} className="bg-black text-white font-sans pt-12 md:pt-20 border-t border-white h-screen flex flex-col overflow-hidden">
+    <footer ref={footerRef} className="bg-black text-white font-sans pt-16 md:pt-20 border-t border-white h-[100svh] md:h-screen flex flex-col overflow-hidden">
 
       {/* Top Section: Info Grid */}
       <motion.div
-        className="px-6 md:px-12 lg:px-16 max-w-[1600px] mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-y-10 md:gap-x-12 shrink-0"
+        className="px-6 md:px-12 lg:px-16 max-w-[1600px] mx-auto w-full grid grid-cols-1 md:grid-cols-3 gap-y-8 md:gap-y-10 md:gap-x-12 shrink-0"
         variants={containerVariants}
         initial="hidden"
         whileInView="visible"
@@ -122,7 +122,7 @@ const Footer = () => {
             </p>
           </div>
 
-          <div className="mt-8 md:mt-0">
+          <div className="mt-6 md:mt-0">
             <p className="font-sans text-xs md:text-sm font-bold uppercase tracking-widest text-white">
               2026
             </p>
@@ -133,11 +133,11 @@ const Footer = () => {
       {/* Bottom Section: Branding Text */}
       <motion.div
         style={{ opacity: textOpacity, scale: textScale }}
-        className="w-full flex-1 min-h-0 flex flex-col justify-center items-center overflow-hidden select-none px-3 sm:px-4 md:px-6 lg:px-8 pb-4"
+        className="w-full flex-1 min-h-0 flex flex-col justify-center items-center overflow-visible select-none px-4 md:px-6 lg:px-8 pb-[max(1.5rem,env(safe-area-inset-bottom))]"
       >
-        <h1 className="font-sans font-black text-[17vw] sm:text-[18vw] md:text-[14vw] xl:text-[13vw] leading-[0.8] text-white uppercase tracking-tighter flex items-start whitespace-nowrap max-w-full">
+        <h1 className="font-sans font-black text-[15.2vw] sm:text-[16vw] md:text-[14vw] xl:text-[13vw] leading-none text-white uppercase tracking-tighter flex items-start whitespace-nowrap max-w-full">
           Yashovrat
-          <span className="text-xl md:text-4xl lg:text-6xl font-medium mt-[1.8vw] ml-1 opacity-60">
+          <span className="text-base sm:text-xl md:text-4xl lg:text-6xl font-medium mt-[1.6vw] ml-1 opacity-60">
             ®
           </span>
         </h1>

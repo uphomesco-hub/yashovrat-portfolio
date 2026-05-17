@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 import { motion, useSpring, useMotionValue, useScroll, useTransform } from "framer-motion";
-import { Github, ExternalLink, Mail } from "lucide-react";
+import { Github, Linkedin, Mail } from "lucide-react";
 
 // Components
 import About from "./About";
@@ -139,24 +139,31 @@ const SpinningCTA = () => (
 const MobileSocialStrip = () => {
   const socials = [
     { label: "Github", icon: Github, href: "https://github.com/uphomesco-hub" },
-    { label: "LinkedIn", icon: ExternalLink, href: "https://www.linkedin.com/in/yashovrat/" },
-    { label: "Zeno AI", icon: ExternalLink, href: "https://vision-voice-agent.netlify.app/" },
-    { label: "UpHomes", icon: ExternalLink, href: "https://uphomes.in/" },
-    { label: "Contact", icon: Mail, href: "#contact" },
+    { label: "Mail", icon: Mail, href: "mailto:yashovrattiwari@gmail.com" },
+    { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/yashovrat/" },
   ];
   return (
     <motion.div
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-      className="flex flex-col items-center gap-6"
+      className="flex flex-col items-center gap-5"
     >
-      {socials.map(({ label, icon: Icon, href }) => (
-        <a key={label} href={href} target={href.startsWith("mailto") ? "_self" : "_blank"} rel="noopener noreferrer"
-          className="text-white hover:opacity-75 transition-opacity duration-300 block">
+      {socials.map(({ label, icon: Icon, href }) => {
+        const isExternal = href.startsWith("http");
+        return (
+        <a
+          key={label}
+          href={href}
+          target={isExternal ? "_blank" : "_self"}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          aria-label={label}
+          className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white hover:text-black"
+        >
           <Icon size={18} strokeWidth={2.5} />
         </a>
-      ))}
+        );
+      })}
     </motion.div>
   );
 };
@@ -183,7 +190,7 @@ const Index = () => {
       </div>
 
       {/* Hero */}
-      <section className="relative h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
+      <section className="relative h-[100svh] md:h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
         <AvailabilityBadge />
         <SocialStrip />
         <SpinningCTA />
@@ -257,7 +264,7 @@ const Index = () => {
       </div>
 
       {/* Parallax Footer Reveal Stack */}
-      <div ref={footerContainerRef} className="relative z-0 h-screen w-full overflow-hidden bg-black text-white">
+      <div ref={footerContainerRef} className="relative z-0 h-[100svh] md:h-screen w-full overflow-hidden bg-black text-white">
         <motion.div style={{ y: footerY }} className="h-full w-full">
           <Footer />
         </motion.div>
