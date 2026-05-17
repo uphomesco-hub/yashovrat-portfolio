@@ -68,7 +68,7 @@ const SocialStrip = () => {
   const socials = [
     { label: "GitHub", href: "https://github.com/uphomesco-hub" },
     { label: "LinkedIn", href: "https://www.linkedin.com/in/yashovrat/" },
-    { label: "Zeno AI", href: "https://vision-voice-agent.netlify.app/" },
+    { label: "X", href: "https://x.com/yashovrat1" },
     { label: "UpHomes", href: "https://uphomes.in/" },
     { label: "Raddie", href: "https://raddie.in/" },
   ];
@@ -174,6 +174,7 @@ const MobileSocialStrip = () => {
     { label: "Github", icon: Github, href: "https://github.com/uphomesco-hub" },
     { label: "Mail", icon: Mail, href: "mailto:yashovrattiwari@gmail.com" },
     { label: "LinkedIn", icon: Linkedin, href: "https://www.linkedin.com/in/yashovrat/" },
+    { label: "X", textIcon: "X", href: "https://x.com/yashovrat1" },
   ];
   return (
     <motion.div
@@ -182,7 +183,7 @@ const MobileSocialStrip = () => {
       transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
       className="flex flex-col items-center gap-5"
     >
-      {socials.map(({ label, icon: Icon, href }) => {
+      {socials.map(({ label, icon: Icon, textIcon, href }) => {
         const isExternal = href.startsWith("http");
         return (
         <a
@@ -193,7 +194,7 @@ const MobileSocialStrip = () => {
           aria-label={label}
           className="flex h-9 w-9 items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white hover:text-black"
         >
-          <Icon size={18} strokeWidth={2.5} />
+          {Icon ? <Icon size={18} strokeWidth={2.5} /> : <span className="font-sans text-sm font-black leading-none">{textIcon}</span>}
         </a>
         );
       })}

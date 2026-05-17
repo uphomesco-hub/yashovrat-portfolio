@@ -21,7 +21,8 @@ const navItems: NavItem[] = [
 
 const socialItems: SocialItem[] = [
   { label: "GitHub", href: "https://github.com/uphomesco-hub" },
-  { label: "Zeno AI", href: "https://vision-voice-agent.netlify.app/" },
+  { label: "LinkedIn", href: "https://www.linkedin.com/in/yashovrat/" },
+  { label: "X", href: "https://x.com/yashovrat1" },
   { label: "UpHomes", href: "https://uphomes.in/" },
   { label: "Raddie", href: "https://raddie.in/" },
 ];

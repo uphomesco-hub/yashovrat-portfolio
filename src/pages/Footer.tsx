@@ -87,12 +87,12 @@ const Footer = () => {
               LinkedIn ↗
             </a>
             <a
-              href="https://vision-voice-agent.netlify.app/"
+              href="https://x.com/yashovrat1"
               target="_blank"
               rel="noopener noreferrer"
               className="font-sans text-xs md:text-sm font-medium uppercase tracking-wide hover:underline underline-offset-4 decoration-1 w-fit flex items-center gap-1"
             >
-              Zeno AI ↗
+              X ↗
             </a>
             <a
               href="https://github.com/uphomesco-hub"
