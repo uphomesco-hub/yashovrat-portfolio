@@ -278,7 +278,18 @@ const Index = () => {
 
       {/* Content stack */}
       <div className="relative z-20 w-full bg-transparent">
-        <div id="about" className="h-screen w-full pointer-events-none" />
+        <div id="about" className="relative h-screen w-full pointer-events-none">
+          <a
+            href="/Yashovrat-Tiwari-Resume.pdf"
+            download
+            className="group absolute bottom-4 left-6 z-30 inline-flex w-[calc(100%-3rem)] overflow-hidden border border-black bg-white px-5 py-4 text-left font-sans text-[10px] font-black uppercase tracking-[0.18em] transition-colors duration-300 pointer-events-auto md:bottom-12 md:left-12 md:max-w-[320px] lg:left-16"
+          >
+            <span className="absolute inset-0 bg-black translate-x-[-101%] transition-transform duration-500 group-hover:translate-x-0" />
+            <span className="relative z-10 text-black transition-colors duration-300 group-hover:text-white">
+              Download Resume
+            </span>
+          </a>
+        </div>
 
         <div id="work" className="bg-black text-white relative z-20">
           <SelectedWorks />
