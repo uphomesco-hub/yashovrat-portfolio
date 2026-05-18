@@ -11,6 +11,7 @@ import Footer from "./Footer";
 import Contact from "./Contact";
 import Testimonial from "./Testimonial";
 import Navigation from "@/components/Navigation";
+import LiveMusicPrompt from "@/components/LiveMusicPrompt";
 
 // --- Cursor Follower ---
 const CursorFollower = () => {
@@ -223,6 +224,7 @@ const Index = () => {
       <BrandLogo />
       <CursorFollower />
       <Navigation />
+      <LiveMusicPrompt />
 
       {/* Fixed background About section */}
       <div className="fixed inset-0 z-0 bg-white text-black">
