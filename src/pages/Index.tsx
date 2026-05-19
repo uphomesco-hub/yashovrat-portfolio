@@ -182,12 +182,12 @@ const MobileSocialStrip = () => {
       initial={{ opacity: 0, x: 20 }}
       animate={{ opacity: 1, x: 0 }}
       transition={{ duration: 0.7, delay: 0.6, ease: "easeOut" }}
-      className="mobile-hero-socials flex flex-col items-center gap-[clamp(0.75rem,2.7svh,1.25rem)]"
+      className="mobile-hero-socials flex flex-col items-center gap-6"
     >
       <style>{`
         .mobile-hero-social-link svg {
-          width: clamp(0.95rem, 4.4vw, 1.125rem);
-          height: clamp(0.95rem, 4.4vw, 1.125rem);
+          width: 18px;
+          height: 18px;
         }
       `}</style>
       {socials.map(({ label, icon: Icon, textIcon, href }) => {
@@ -199,9 +199,9 @@ const MobileSocialStrip = () => {
           target={isExternal ? "_blank" : "_self"}
           rel={isExternal ? "noopener noreferrer" : undefined}
           aria-label={label}
-          className="mobile-hero-social-link flex h-[clamp(2rem,9.2vw,2.25rem)] w-[clamp(2rem,9.2vw,2.25rem)] items-center justify-center rounded-full border border-white/20 bg-white/5 text-white backdrop-blur-sm transition-colors duration-300 hover:bg-white hover:text-black"
+          className="mobile-hero-social-link block text-white transition-opacity duration-300 hover:opacity-75"
         >
-          {Icon ? <Icon strokeWidth={2.5} /> : <span className="font-sans text-[clamp(0.75rem,3.5vw,0.875rem)] font-black leading-none">{textIcon}</span>}
+          {Icon ? <Icon strokeWidth={2.5} /> : <span className="font-sans text-lg font-black leading-none">{textIcon}</span>}
         </a>
         );
       })}
@@ -232,8 +232,7 @@ const Index = () => {
       </div>
 
       {/* Hero */}
-      <section className="relative h-[100svh] md:h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
-        <MobileHeroAmbient />
+      <section className="relative h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
         <AvailabilityBadge />
         <SocialStrip />
         <SpinningCTA />
@@ -242,13 +241,12 @@ const Index = () => {
         {/* Mobile Midpoint Buffer: 80px total height from top to clear hamburger (Hamburger at 24px + 56px height) */}
         <div className="h-[32px] w-full md:hidden" /> {/* py-12 (48px) + 32px = 80px */}
 
-        {/* Mobile social stack is pinned below the hamburger so short screens do not collide. */}
-        <div className="absolute right-6 top-[clamp(5.75rem,13svh,6.5rem)] md:hidden z-10 pointer-events-none">
+        {/* Dynamic Centering Container for Mobile Socials */}
+        <div className="flex-1 flex flex-col items-end justify-center md:hidden pr-0 z-10 pointer-events-none">
           <div className="pointer-events-auto">
             <MobileSocialStrip />
           </div>
         </div>
-        <div className="flex-1 md:hidden" />
 
         <div className="z-10 mt-auto mb-6 md:mb-8">
           <motion.div
@@ -264,7 +262,7 @@ const Index = () => {
                 <path d="M1 6h10M6 1l5 5-5 5" />
               </svg>
             </a>
-            <h1 className="font-sans font-bold text-7xl md:text-8xl lg:text-[9rem] xl:text-[11rem] leading-[0.85] tracking-tighter text-white uppercase text-left">
+            <h1 className="font-sans font-bold text-[4rem] md:text-8xl lg:text-[9rem] xl:text-[11rem] leading-[0.85] tracking-tighter text-white uppercase text-left">
               Full-stack<br />AI builder
             </h1>
           </motion.div>

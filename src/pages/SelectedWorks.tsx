@@ -396,7 +396,7 @@ const SelectedWorks = () => {
             <ScrollStackCard key={project.id} project={project} index={index} />
           ))}
         </div>
-        <div className={`scroll-stack-end pointer-events-none h-[24vh] lg:h-[70vh]`} />
+        <div className="scroll-stack-end pointer-events-none h-[120vh]" />
       </div>
 
       <div ref={kineticWheelRef} className="kinetic-wheel pointer-events-none" style={{
@@ -453,7 +453,6 @@ const SelectedWorks = () => {
               <text ref={textBuildRef} x="1250" y="1250" fill="#ffffff" style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '100px', opacity: 0.3 }} textAnchor="middle" dy=".3em">BUILD</text>
               <circle cx="1250" cy="1350" r="15" fill="#ffffff" filter="url(#glow)" />
 
-              <text ref={textDeliverRef} x="750" y="1800" fill="#ffffff" style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: '100px', opacity: 0.3 }} textAnchor="middle" dy=".3em">SHIP</text>
               <circle cx="750" cy="1900" r="20" fill="#ffffff" filter="url(#glow)" />
             </g>
           </svg>
@@ -464,8 +463,7 @@ const SelectedWorks = () => {
               { text: 'SENSE', offset: '12%' }, { text: '●', offset: '24%' },
               { text: 'REASON', offset: '34%' }, { text: '●', offset: '45%' },
               { text: 'AI', offset: '54%' }, { text: '●', offset: '62%' },
-              { text: 'BUILD', offset: '72%' }, { text: '●', offset: '82%' },
-              { text: 'SHIP', offset: '90%' },
+              { text: 'BUILD', offset: '72%' },
             ].map((item, i) => (
               <text key={i} fill="#ffffff" style={{ fontFamily: 'sans-serif', fontWeight: 800, fontSize: item.text === '●' ? '50px' : '100px', textTransform: 'uppercase' }} dy={item.text === '●' ? '-18' : '0'}>
                 <textPath href="#arc-path" startOffset={item.offset} textAnchor="middle">{item.text}</textPath>
