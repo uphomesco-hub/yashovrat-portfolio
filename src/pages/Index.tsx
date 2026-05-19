@@ -232,7 +232,8 @@ const Index = () => {
       </div>
 
       {/* Hero */}
-      <section className="relative h-screen bg-black flex flex-col px-6 py-12 md:px-16 md:py-16 z-20 overflow-hidden">
+      <section className="relative h-screen bg-black flex flex-col px-6 pt-12 pb-28 md:px-16 md:py-16 z-20 overflow-hidden">
+        <MobileHeroAmbient />
         <AvailabilityBadge />
         <SocialStrip />
         <SpinningCTA />
@@ -268,7 +269,7 @@ const Index = () => {
           </motion.div>
         </div>
 
-        <div className="z-10 grid grid-cols-1 md:grid-cols-12 w-full gap-4 mb-8 md:mb-0">
+        <div className="z-10 grid grid-cols-1 md:grid-cols-12 w-full gap-4 mb-2 md:mb-0">
           <motion.div
             initial={{ opacity: 0, x: -20 }}
             animate={{ opacity: 1, x: 0 }}

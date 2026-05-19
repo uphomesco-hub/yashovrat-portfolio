@@ -37,73 +37,75 @@ const About = () => {
   const opacity4 = useTransform(scrollY, [vh * 0.3, vh * 0.6], [0, 1]);
 
   return (
-    <section className="about-mobile-section h-[100svh] md:h-screen w-full bg-white text-black font-sans px-6 md:px-12 lg:px-16 pt-20 pb-8 md:py-0 overflow-hidden flex items-start md:items-center justify-center relative">
+    <section className="about-mobile-section h-[100svh] md:h-screen w-full bg-white text-black font-sans px-6 md:px-12 lg:px-16 overflow-hidden flex items-center justify-center relative">
       <style>{`
         @media (max-width: 767px) {
           .about-mobile-section {
-            padding-top: clamp(4rem, 8.5svh, 5rem);
-            padding-bottom: calc(clamp(4.25rem, 8svh, 5.5rem) + env(safe-area-inset-bottom));
+            padding-top: calc(clamp(3.25rem, 7svh, 4.75rem) + env(safe-area-inset-top));
+            padding-bottom: calc(clamp(3.25rem, 7svh, 4.75rem) + env(safe-area-inset-bottom));
           }
           .about-mobile-grid {
-            row-gap: clamp(0.9rem, 2svh, 1.35rem);
+            row-gap: clamp(1.05rem, 2.4svh, 1.7rem);
+            max-height: calc(100svh - clamp(6.5rem, 14svh, 9.5rem));
+            align-content: center;
           }
           .about-mobile-content {
-            gap: clamp(0.8rem, 2.2svh, 1.5rem);
+            gap: clamp(1.05rem, 2.7svh, 1.85rem);
           }
           .about-mobile-item-gap {
-            gap: clamp(0.5rem, 1.7svh, 1rem);
+            gap: clamp(0.7rem, 2svh, 1.2rem);
           }
           .about-mobile-label {
-            font-size: clamp(0.62rem, 1.45svh, 0.75rem);
-            line-height: 1.05;
+            font-size: clamp(0.68rem, 1.65svh, 0.82rem);
+            line-height: 1.08;
           }
           .about-mobile-body {
-            font-size: clamp(0.92rem, 1.95svh, 1.125rem);
-            line-height: 1.12;
+            font-size: clamp(1rem, 2.35svh, 1.25rem);
+            line-height: 1.16;
           }
         }
         @media (max-width: 380px), (max-height: 740px) {
           .about-mobile-section {
-            padding-top: 4rem;
-            padding-bottom: calc(4.75rem + env(safe-area-inset-bottom));
+            padding-top: calc(3rem + env(safe-area-inset-top));
+            padding-bottom: calc(3rem + env(safe-area-inset-bottom));
           }
           .about-mobile-grid {
-            row-gap: 0.85rem;
+            row-gap: 0.95rem;
           }
           .about-mobile-content {
-            gap: 0.72rem;
+            gap: 0.86rem;
           }
           .about-mobile-item-gap {
-            gap: 0.48rem;
+            gap: 0.58rem;
           }
           .about-mobile-body {
-            font-size: clamp(0.82rem, 1.78svh, 1rem);
-            line-height: 1.08;
+            font-size: clamp(0.88rem, 2.05svh, 1.05rem);
+            line-height: 1.1;
           }
           .about-mobile-label {
-            font-size: clamp(0.56rem, 1.35svh, 0.68rem);
+            font-size: clamp(0.58rem, 1.5svh, 0.72rem);
           }
         }
         @media (max-height: 640px) {
           .about-mobile-section {
-            padding-top: 3rem;
-            padding-bottom: calc(4.25rem + env(safe-area-inset-bottom));
+            padding-top: calc(2.25rem + env(safe-area-inset-top));
+            padding-bottom: calc(2.25rem + env(safe-area-inset-bottom));
           }
           .about-mobile-grid {
-            row-gap: 0.62rem;
+            row-gap: 0.6rem;
           }
           .about-mobile-content {
-            gap: 0.42rem;
+            gap: 0.48rem;
           }
           .about-mobile-item-gap {
             gap: 0.28rem;
           }
           .about-mobile-body {
-            font-size: 0.68rem;
-            line-height: 1.02;
+            font-size: clamp(0.72rem, 1.85svh, 0.86rem);
+            line-height: 1.04;
           }
           .about-mobile-label {
-            font-size: 0.5rem;
+            font-size: 0.54rem;
           }
         }
       `}</style>
